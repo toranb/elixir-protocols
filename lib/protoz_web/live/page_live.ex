@@ -8,7 +8,7 @@ defmodule ProtozWeb.PageLive do
         Protoz.Schemas.Post
         |> Protoz.Repo.all()
         |> Protoz.Repo.preload(:comments)
-        |> Enum.map(&Protoz.Domain.Post.from_record/1)
+        |> Enum.map(&Protoz.Domain.Mapper.from_record/1)
       end)
 
     {:ok, socket}
