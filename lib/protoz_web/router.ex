@@ -17,7 +17,7 @@ defmodule ProtozWeb.Router do
   scope "/", ProtozWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
+    live "/", PageLive, :index
   end
 
   # Other scopes may use custom stacks.
